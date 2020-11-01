@@ -1,0 +1,341 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body{
+
+    height: 5000px;
+}
+
+.navbar .navbar-brand
+{
+    text-transform: uppercase;
+    color:#a67ecf;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-nav 
+{
+    margin-left: 480px;
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+
+    color: #a67ecf;
+    
+}
+.nav-item
+{
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar .navbar-brand:hover
+{
+    color:#a67ecf;
+}
+
+
+/*start about */
+
+.about
+{
+    width: 100%;
+    height: 500px;
+    padding: 50px 0;
+    position: relative;
+}
+.about .narrow h1 , .product .narrow h1
+{
+    font-size: 2em;
+    font-family: Arial;
+    color: #a67ecf;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.about .narrow p , .product .narrow p
+{
+    line-height: 1.8;
+    color: #888;
+
+}
+
+/* End about */
+
+/* Start images*/
+
+.images
+{
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+.images .one
+{
+    background-image: url("../images/w1.jpg");
+    background-size: cover;
+    height: 650px;
+    float: left;
+    width: 55%;
+}
+.images .one p{
+    color: rgb(184, 28, 28);
+    text-align: center;
+    margin-top: 535px;
+    background-color: rgba(185, 179, 179,.7);
+    height: 120px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 25px;
+
+}
+.images .two
+{
+    width: 40%;
+    float: left;
+}
+.images .two img
+{
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+.images .three
+{
+    position: absolute;
+    top: 50px;
+    right: 120px;
+}
+.images .four
+{
+    position: absolute;
+    top: 260px;
+    right: 120px;
+}
+.images .five
+{
+    position: absolute;
+    top: 500px;
+    right: 120px;
+}
+.images .three, .four,.five p,span
+{
+    color: #888;
+    font-size: 17px;
+    font-family: Arial;
+    font-weight: bold;
+} 
+@media(max-width:767px){
+    .images .three, .four,.five p,span
+    {
+        display: none;
+    }
+   
+}
+
+@media (max-width: 1360px){
+    .images .three, .four,.five p,span
+    {
+        display: none;
+    }
+   
+   
+}
+@media(max-width:767px){
+    .images .one{
+        width: 25%;
+        height: 300px;
+        background-size: cover;
+    }
+    .images .one p{
+
+        margin-top: 250px;
+        padding: 10px;
+        visibility: hidden;
+        background-color:rgba(255,255,255,.9);
+
+    }
+   
+}
+
+@media (max-width: 992px){
+    .images .one{
+        width: 35%;
+        height: 300px;
+        background-size: cover;
+    }
+    .images .one p{
+
+        margin-top: 250px;
+        padding: 10px;
+
+    }
+}
+
+@media(max-width:767px){
+    .images .two img
+    {
+        width: 100px;
+        height: 100px;
+
+    }
+   
+}
+
+@media (max-width: 992px){
+    .images .two img
+    {
+        width: 100px;
+        height: 100px;
+
+    }
+   
+   
+}
+/* End images*/
+
+/* start services */
+
+.service
+{
+    width: 100%;
+    height: 400px;
+    background-image: url("../images/intro.jpg");
+    background-attachment: fixed;
+    margin-top: 7%;
+    position: relative;
+    
+}
+section.service p
+{
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 3px solid #FFF;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 33%;
+
+
+}
+@media(max-width:900px)
+{
+    .service
+    {
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
+
+    .service p
+    {
+        position: absolute;
+        font-size: 15px;
+        right: 30%;
+        font-weight: bold;
+        
+    }
+    
+
+}
+
+/* End services */
+
+
+
+/* Start product*/
+
+.product
+{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+.row
+{
+    margin-top: 100px;
+}
+.product img
+{
+    width: 100%;
+    height: 250px;
+}
+
+/* end product */
+
+/* start choose */
+
+.choose
+{
+    width: 100%;
+    height: auto;
+
+}
+
+.choose h1
+{
+    color: #a67ecf;
+    font-family: Arial;
+    margin-bottom: 30px;
+
+}
+.choose p
+{
+
+    color: #888;
+    line-height: 2.4;
+    font-size: 16px;
+    
+}
+
+
+
+
+
+
+/* End choose */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:767px){
+    .navbar-nav
+    {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 995px){
+    .navbar-nav
+    {
+        margin-left: 0px;
+    }
+}
+
+

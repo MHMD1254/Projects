@@ -1,0 +1,186 @@
+body
+{
+
+    font-family: 'Raleway', sans-serif;
+    background-color: #1f1f25;
+    color: #FFF;
+
+}
+
+/* Start nav-left*/
+
+.nav-left
+{
+
+    position: relative;
+    padding:20px 8px ;
+}
+
+.nav-left .brand .logo img
+{
+    width: 100%;
+
+}
+.nav-left .brand .logo-text
+{
+    position: absolute;
+    transform: translate(17%, 318%);
+    transform: rotate(270deg);
+    top: 167px;
+    left: -76px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.nav-left .menu
+{
+    position: relative;
+    margin-top: 280px;
+    cursor: pointer;
+}
+.nav-left .menu:hover span
+{
+    width: 100%;
+    
+
+}
+.nav-left .menu:hover .top
+{
+    animation: toogle 0.8s infinite ease-in-out;
+}
+.nav-left .menu:hover .bottom
+{
+    animation: toogle 0.8s infinite ease-in-out 0.16s;
+
+}
+@keyframes toogle
+{
+    100%
+    {
+        width: 0%;
+    }
+    50%{
+        width: 50%;
+        background-color: #595959;
+    }
+    100%
+    {
+        width:100%;
+    }
+}
+.nav-left .menu span
+
+{
+    
+    height: 3px;
+    background-color: #FFF;
+    display: block;
+    
+}
+.nav-left .menu .top
+{
+
+    width: 100%;
+    transition: 0.8s;
+}
+.nav-left .menu .bottom
+{
+    width: 75%;
+    margin-top: 10px;
+    transition: 0.8s;
+}
+
+.nav-left .menu .name
+{
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+.nav-left .icons ul 
+{
+    padding:0 0 0 10px;
+    margin-top: 15px;
+
+}
+
+.nav-left .icons li
+{
+    margin-bottom: 16px;
+    margin-left: 5px;
+}
+
+.nav-left .icons li a
+{
+    color: #FFF;
+    font-size:20px;
+}
+.dark
+{
+    margin-top: 60px;
+}
+
+.dark i
+{
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/*End nav-left*/
+
+/* Start slider */
+.slider .owl-carousel .item img
+{
+    width: 100%;
+}
+
+/* End slider */
+
+/* Start side-menu */
+.side-menu
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(15,15,15,0.9);
+    z-index: 99999;
+}
+
+.side-menu .icon
+{
+
+}
+
+.side-menu ul
+{
+
+}
+
+
+.side-menu li
+{
+
+}
+
+.side-menu a
+{
+
+}
+
+/* End side-menu */
+
+
+
+
+/* Start framework*/
+
+ul
+{
+    list-style: none;
+}
+
+/* End Framework*/

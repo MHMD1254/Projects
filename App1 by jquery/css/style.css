@@ -1,0 +1,1273 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    
+}
+.container
+{
+    width: 1200px;
+    margin: 0 auto;
+}
+.row
+{
+    display: flex;
+}
+
+/* Start nav */
+nav
+{
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:9999;
+    transition: 0.5s;
+}
+nav .logo
+{
+    flex: 25%;
+    max-width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .logo img
+{
+    width: 100px;
+    
+}
+nav .logo h3
+{
+    display: inline-block;
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: #FFF;
+}
+nav .list
+{
+    flex: 75%;
+    max-width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+
+nav .list ul li 
+{
+    display: inline-block;
+}
+nav .list ul li a
+{
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding:10px;
+    font-size: 16px;
+    position: relative;
+    font-weight: 700;
+
+
+    
+}
+
+nav .list ul li a::before
+{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #0078FE;
+    border-bottom:1px solid #0078FE;
+    transform: scaleY(2);
+    transition: 0.5s;
+    opacity: 0;
+}
+nav .list ul li a:hover::before
+{
+    opacity: 1;
+    transform:scaleY(1.2);
+}
+nav .list ul li a::after
+{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0078FE;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.5s;
+}
+nav .list ul li a:hover::after
+{
+    transform: scale(1);
+    color: #FFF;
+
+}
+
+
+nav .list ul li:last-of-type
+{
+    background: #0078FE;
+    color: #FFF;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-transform: capitalize;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    transition: 0.4s;
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin-left: 30px;
+}
+nav .list ul li:last-of-type:hover
+{
+    background: none;
+    border: 2px solid #0078FE;
+    color: FFF;
+}
+
+/*End nav */
+
+/* Start header */
+
+.header
+{
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+.header .info
+{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    color: #FFF;
+    text-transform: uppercase;
+
+}
+.header .info h2
+{
+    line-height: 70px;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin: 0;
+
+}
+.header .info h2 span:first-of-type
+{
+    margin-left: 80px;
+}
+.header .info h2 span:last-of-type
+{
+    color: #0078FE;
+}
+.header .info p
+{
+    font-size: 18px;
+    font-weight: 900;
+    color:#bbb;
+    margin-left: 20px;
+}
+
+.header .info .play-btn
+{
+   width: 90px;
+   height: 90px;
+   background-color: #FFF;
+   display: block;
+   margin: 0 auto;
+   border-radius: 50%;
+   position: relative;
+   background:radial-gradient(#0078FE 50% , rgba(5, 5, 5, 0.8) 52%);
+   overflow:hidden;
+}
+
+.header .info .play-btn::before
+{
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 120px;
+    top: -15px;
+    left:-15px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse
+{
+    0%{
+        transform:scale(0.6,0.6);
+    }
+
+    100%
+    {
+        transform:scale(1,1);
+    }
+
+}
+
+.header .info .play-btn::after
+{
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: 45%;
+    border-left: 15px solid #FFF;
+    border-top: 10px solid transparent;
+    border-bottom:10px solid transparent;
+    transition: 0.5s;
+}
+
+.header .info .play-btn:hover::after
+{
+    transform: scale(20);
+    border-left: 15px solid #0078FE;
+    z-index: 100;
+
+
+}
+.header .info .play-btn:hover::before
+{
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: 45%;
+    border: none;
+    border-left: 15px solid #FFF;
+    border-top: 10px solid transparent;
+    border-bottom:10px solid transparent;
+    width: 0;
+    height: 0;
+    animation: none;
+    z-index: 101;
+    border-radius: 0;
+
+
+}
+
+.header .info .about-btn
+{
+    display: block;
+    margin: 45px auto;
+    text-decoration: none;
+    color:#FFF;
+    border: 2px solid #0078FE;
+    border-radius: 50px;
+    padding: 15px 30px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    
+}
+
+.header .info .about-btn:hover
+{
+    background-color: #0078FE; 
+
+}
+
+/* End header */
+
+
+/* Start About*/
+.about
+{
+    background-image: url(../images/about.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 300px;
+    position: relative;
+    color: #FFF;
+
+}
+
+.about .overlay
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.about .box-about
+{
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 15px;
+}
+
+.about .small-box
+{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 15px;
+}
+
+.about h3{
+    font-size: 32px;
+    text-transform: capitalize;
+}
+.about p
+{
+    font-size: 14px;
+    line-height: 27px;
+}
+/* End About */
+
+/* Start clients*/
+.clients
+{
+    margin-top: 70px;
+}
+
+.clients .box
+{
+    flex: 33.333%;
+    max-width: 33.33%;
+    padding: 0 15px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.clients .box img
+{
+    width: 100%;
+    height: 246px;
+}
+
+.clients .box .info
+{
+    position: absolute;
+    bottom:-45px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color:#FFF;
+    margin: 0 15px;
+    padding: 10px 0 20px;
+    transition:0.5s;
+    
+}
+.clients .box:hover .info
+{
+
+    bottom: 0;
+}
+
+.clients .box .info h3
+{
+    font-size: 26px;
+    margin: 10px;
+}
+.clients .box .info p
+{
+   
+    font-style: italic;
+}
+.clients .box .info a
+{
+    color: #FFF;
+    font-size: 23px;
+    padding: 6px;
+}
+
+/* End Clients */
+
+/* Start testimonials */
+
+.testimonials
+{
+    
+    background-color: #f6f7fD;
+    padding: 50px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.testimonials .buttons
+{
+    text-align: center;
+} 
+.testimonials .buttons .btn
+{
+    color: #FFF;
+    background-color: #0E184D;
+    text-decoration: none;
+    padding: 10px 50px;
+    border-radius:50px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.testimonials .buttons .active
+{
+    background-color: #0078FE;
+}
+.testimonials h3
+{
+    font-style: italic;
+    font-size: 15px;
+    color: #666666;
+    margin: 40px 100px;
+    line-height: 25px;
+}
+
+.testimonials .stuff
+{
+    margin: 0 auto;
+    padding: 15px;
+}
+.testimonials .stuff .item
+{
+    border-bottom: 1px solid #666666;
+    margin:0 200px 0 200px;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+
+
+}
+.testimonials .stuff .time 
+{
+    flex: 17%;
+    max-width: 17%;
+    font-weight: bold;
+    font-size: 18px;
+    color: #666;
+    
+
+}
+.testimonials .stuff .info
+{
+    flex: 83%;
+    max-width: 83%;
+    text-align: left;
+    margin-left: 70px;
+
+
+}
+.testimonials .stuff .info img
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    float: left;
+    margin-right: 20px;
+    
+}
+.testimonials .stuff .info h3
+{
+    margin: 10px;
+    color: #0E184D;
+    font-size: 30px;
+}
+
+.testimonials .stuff .info p
+{
+    font-style: italic;
+    color: #666;
+    font-size: 17px;
+    
+}
+
+
+/* End testimonials */
+
+
+/* Start product */
+.products
+{
+    margin-top: 70px;
+
+}
+.products .map
+{
+    flex: 50%;
+    max-width: 50%;
+   
+
+}
+.products .map iframe
+{
+    height: 450px;
+    width: 100%;
+}
+
+.products .info
+{
+    flex: 50%;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products .info img
+{
+    width: 100%;
+}
+
+
+.products .info .speech
+{
+   position: absolute;
+    color: #FFF;
+    padding: 10px 70px;
+}
+.products .info .speech h2
+{
+    font-size: 50px;
+    text-transform: capitalize;
+    margin: 0;
+}
+.products .info .speech p
+{
+    line-height: 27px;
+    font-style: italic;
+}
+
+.products .box
+{
+    flex: 25%;
+    max-width: 25%;
+    height: 250px;
+    overflow: hidden;
+    
+}
+.products .box:not(:last-of-type)
+{
+    padding: 4px 4px 0 0;
+
+}
+.products .box:hover img
+{
+    transform: scale(1.1);
+}
+.products .box img
+{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    
+}
+.products a .venobox
+{
+    height: 250px;
+}
+/* End product */
+
+/* Start blogs */
+
+.blogs
+{
+    background-color: #f6f7fD;
+    margin-top: 70px;
+    padding: 50px 0;
+}
+.blogs .table
+{
+    flex: 33.333%;
+    max-width: 33.333%;
+    padding: 0 15px;
+    cursor: pointer;
+    
+}
+
+.blogs .table .image
+{
+    height: 270px;
+    overflow: hidden;
+}
+.blogs .table:hover .image img
+{
+    transform: scale(1.1);
+}
+.blogs .table .image img
+{
+    width: 100%;
+    height: 100%;
+    transition:0.5s;
+
+}
+.blogs .table .info 
+{
+  margin: 30px 0 30px 30px;
+}
+.blogs .table .info h4
+{
+    font-size: 30px;
+    font-weight: 800px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.blogs .table .info .star
+{
+    margin: 10px 0;
+}
+.blogs .table .info .star i
+{
+    color:rgb(231, 231, 1)
+}
+.blogs .table .info p
+{
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+}
+/* End blogs */
+
+/* Start gallary */
+
+.gallary
+{
+    margin-top: 70px;
+    padding: 30px 70px;
+    overflow: hidden;
+}
+.gallary .owl-stage-outer
+{
+    overflow:visible;
+}
+.gallary .owl-item
+{
+    height: 220px;   
+    border-left: 4px solid #FFF;
+}
+.gallary .center
+{
+    border: 6px solid #0078FE;
+    padding: 4px;
+    box-sizing: content-box;
+    margin: -10px;
+    z-index: 1;
+    background-color: #FFF;
+}
+.gallary .owl-item img
+{
+    height: 100%;
+}
+
+.gallary .owl-dots
+{
+   text-align: center;
+   margin-top: 25px;
+  
+
+}
+
+.gallary .owl-dots .owl-dot
+{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(185, 173, 173);
+    margin: 15px 5px;
+    display: inline-block;
+    outline: none;
+}
+
+.gallary .owl-dots .active
+{
+    background-color: #0078FE;
+}
+
+/* End gallary */
+
+
+/* Start sponsors */
+
+.sponsors
+{
+    margin-top: 70px;
+    padding: 60px 0;
+    background-color: #f6f7fD;
+}
+
+.sponsors .box
+{
+    flex: 25%;
+    max-width: 25%;
+    background-color: #FEFEFB;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow:hidden;
+    cursor: pointer;
+}
+.sponsors .box img
+{
+    width: 160px;
+    height: 150px;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+.sponsors .box:hover img
+{
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+/* End sponsors */
+
+
+/* Start F.A.Q */
+
+.faq
+{
+    margin-top: 70px;
+}
+
+.faq .content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.faq .content .list
+{
+    width: 70%;
+    
+}
+.faq .content .list li
+{
+    border-bottom: 1px solid #666;
+    padding: 10px 0;
+
+}
+
+.faq .content .list ul i
+{
+    float: right;
+    margin: -43px 0;
+    font-size: 23px;
+}
+
+.faq .content .list ul p
+{
+    color:#999;
+    font-style: italic;
+    line-height: 25px;
+    display: none;
+}
+
+/* End F.A.Q */
+
+
+/* Start back */
+
+.back
+{
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    height: 300px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 50px;
+
+}
+
+.back .heading
+{
+    position: absolute;
+    left: 25%;
+    top: 28%;
+    
+
+}
+.back .heading h2
+{
+    color:#FFF
+}
+.back .heading p
+{
+    color:#FFF;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+.back .info
+{
+    position: absolute;
+    bottom: 50px;
+    left: 15%;
+}
+
+.back .info input
+{
+    width: 920px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    outline: none;
+    font-weight: bold;
+    font-size: 17px;
+    border: none;
+}
+.back .info button
+{
+    background-color:#0078FE;
+    color: #FFF;
+    padding: 10px 30px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+/* End back */
+
+
+/* Start price */
+.price
+{
+    margin-top: 70px;
+    background-color: #eaecfb;
+    padding: 100px;
+}
+
+.price .table
+{
+    flex: 33.3333%;
+    max-width: 33.333%;
+    margin: 0 15px;
+    background-color: #FFF;
+    padding: 0 20px;
+
+}
+
+.price .table .item
+{
+    text-align: center;
+    border-bottom: 1px solid #999;
+    padding: 25px 0;
+}
+.price .table .item h5
+{
+    color: #bbb;
+    text-transform: uppercase;
+    font-size: 19px;
+    margin: 0;
+}
+.price .table .item span
+{
+    font-size: 50px;
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+
+}
+.price .table .info
+{
+    border-bottom: 1px solid #999;
+}
+.price .table .info li
+{
+    color: #666666;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 15px;
+
+}
+.price .table .info li span
+{
+    color: #999;
+}
+.price .table .info li i 
+{
+    margin: 0 25px;
+    font-size: 20px;
+    color: #000;
+}
+
+.price .table .info li .fa-times
+{
+    color:#999
+}
+
+.price .table .btn
+{
+    padding: 30px;
+    text-align: center;
+}
+
+
+.price .table .btn button
+{
+    padding: 10px 50px;
+    background-color: #0078FE;
+    color: #FFF;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    transition:0.3s;
+
+}
+.price .table .btn button:hover
+{
+    cursor: pointer;
+    border: 2px solid #0078FE;
+    color: #0078FE;
+    background: none;
+}
+
+/* End price */
+
+
+/* Start contact */
+
+.contact
+{
+    margin-top: 60px;
+    padding: 50px;
+}
+
+.contact .box
+{
+    flex: 33.333%;
+    max-width: 33.333%;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.contact .box:not(:last-of-type)
+{
+    border-right: 1px solid #666;
+}
+.contact .box h3
+{
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.contact .box p
+{
+    color: rgb(141, 123, 123);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.contact form 
+{
+    margin-top: 50px;
+}
+
+.contact form input:first-of-type
+{
+    width: 50%;
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+.contact form input:nth-of-type(2)
+{
+    float: right;
+    width: 49%;
+    height: 40px;
+    margin-left: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.contact form input:nth-of-type(3)
+{
+    
+    width: 100%;
+    height: 40px;
+    margin: 30px 0;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.contact form textarea
+{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.contact form button
+{
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    color: #FFF;
+    background-color: #0078FE;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition:0.5s;
+    font-weight: 700;
+}
+.contact form button:hover
+{
+    border: 2px solid #0078FE;
+    background: none;
+    color:#0078FE
+
+
+}
+/* End contact */
+
+/* Start Footer */
+footer
+{
+    margin-top: 70px;
+    background-color: #040919;
+    height: 500px;
+}
+footer .box , footer .content
+{
+   
+    flex: 25%;
+    max-width: 25%;
+    padding: 50px 0;
+   
+
+}
+footer .box .info
+{
+    display: flex;
+   margin-left: 20px;
+
+}
+footer .box .info img
+{
+    width: 30%;
+}
+footer .box .info h3
+{
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+footer .box p
+{
+    color:#999;
+    margin-left: 40px;
+    line-height: 27px;
+    letter-spacing: 1.2px;
+}
+footer .content
+{
+    margin-left: 50px;
+}
+footer .content h3
+{
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid #0078FE;
+    padding-bottom: 12px;
+}
+footer .content .list li
+{
+    position: relative;
+    border-bottom: 1px solid #666;
+}
+footer .content .list li i
+{
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color:#0078FE
+}
+footer .content li a
+{
+    text-decoration: none;
+    color:#FFF;
+    padding: 14px 0;
+    display: block;
+    margin-left: 20px;
+}
+
+footer .content  p
+{
+    color: #999;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+footer .content  p span
+{
+    font-weight: bold;
+}
+footer .content  .moh1
+{
+    color: #FFF;
+    margin-left: 10px;
+    font-size: 17px;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(93, 91, 91);
+    border-radius: 50%;
+    padding-left:10px;
+    padding-top: 10px;
+    
+}
+ 
+
+/* End Footer */
+
+
+/* Start Copy */
+.copy
+{
+    background-color: #666;
+    height:100px;
+    text-align: center;
+    margin-top:-20px;
+    padding: 10px;
+}
+
+.copy p
+{
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.copy p span
+{
+    font-weight: 900;
+    color:rgb(5, 5, 156);
+}
+
+/* End Copy */
+.up
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius:10px;
+    border: none;
+    background: #0078FE;
+    outline: none;
+    cursor: pointer; 
+    display: none;
+}
+.up i
+{
+    font-size: 18px;
+    color: #FFF;
+    
+}
+
+
+/* Start framework */
+
+ul
+{
+    list-style:none;
+    padding: 0;
+}
+.overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(6, 12,34, 0.7);
+
+}
+
+.display-table
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: table;
+    
+}
+
+.table-cell
+{
+    display: table-cell;
+    vertical-align: middle;
+    position: absolute;
+    left: 100px;
+    margin-top: 50px;
+}
+.heading
+{
+    text-align:center;
+    margin-bottom: 50px;
+
+}
+.heading h2
+{
+    text-transform: uppercase;
+    font-size: 37px;
+    margin: 0;
+    font-weight: 800;
+    color: #0E184D;
+}
+
+.heading p
+{
+    font-size: 20px;
+    color: #999;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.heading span
+{
+    width: 50px;
+    height: 3px;
+    background-color: #0078FE;
+    display: block;
+    margin: 0px auto;
+
+}
+
+/* End framework */
